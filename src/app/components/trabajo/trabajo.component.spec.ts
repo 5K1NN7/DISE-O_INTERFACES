@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Grid1Component } from './grid-1.component';
+import { Grid1Component } from './trabajo.component';
 
 describe('Grid1Component', () => {
   let component: Grid1Component;

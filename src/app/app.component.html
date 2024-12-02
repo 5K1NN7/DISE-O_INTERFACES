@@ -1,31 +1,75 @@
-<div class="card">
-    <p-toolbar 
-        styleClass="bg-gray-900 shadow-2" 
-        [style]="{ 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' }">
-        <ng-template pTemplate="start">
-            <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
-        </ng-template>
-        <ng-template pTemplate="center">
-            <div class="flex flex-wrap align-items-center gap-3">
-                <button 
-                  class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
-                  [routerLink]="['/']"> 
-                    <i class="pi pi-home text-2xl"></i>
-                </button>
-            </div>
-        </ng-template>
-        <ng-template pTemplate="end">
-            <div class="flex align-items-center gap-2">
-                <p-avatar 
-                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
-                    shape="circle" />
-                <span class="font-bold text-bluegray-50">
-                    Alexander Saravia
-                </span>
-            </div>
-        </ng-template>
-    </p-toolbar>
+<div class="flex flex-col h-screen bg-gray-800 p-6">
+    <!-- Barra de navegación -->
+    <nav class="bg-gradient-to-r from-blue-500 to-indigo-600 p-4 rounded-lg shadow-xl mb-6">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" alt="Logo" class="h-10" />
+  
+        <!-- Botón Home -->
+        <button 
+          class="p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition duration-300"
+          [routerLink]="['/']">
+          <i class="pi pi-home text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+  
+    <!-- Contenido principal -->
+    <main class="flex-grow bg-gray-900 text-white rounded-lg p-8">
+      <h1 class="text-3xl font-semibold mb-4">Bienvenido a la aplicación</h1>
+      <p class="text-lg">
+        Aquí va el contenido de la página. Puedes cambiar este texto según tus necesidades.
+      </p>
+    </main>
   </div>
   
-  <router-outlet></router-outlet> 
+  <!-- Router Outlet -->
+  <router-outlet></router-outlet>
+  
+  <!-- Media Queries Responsivas -->
+  <style>
+    @media (max-width: 640px) {
+      /* Barra de navegación */
+      .bg-gradient-to-r {
+        background: linear-gradient(to right, #3b82f6, #4f46e5);
+      }
+  
+      /* Asegura que el contenido se ajuste en pantallas pequeñas */
+      .p-8 {
+        padding: 4px;
+      }
+  
+      /* Ajuste del logo */
+      .h-10 {
+        height: 30px;
+      }
+  
+      /* Ajuste del botón */
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (min-width: 641px) {
+      /* Barra de navegación en pantallas más grandes */
+      .bg-gradient-to-r {
+        background: linear-gradient(to right, #3b82f6, #4f46e5);
+      }
+  
+      /* Contenido se ajusta con un padding más grande en pantallas medianas */
+      .p-8 {
+        padding: 2rem;
+      }
+  
+      /* Asegura que el logo tenga un tamaño adecuado en pantallas más grandes */
+      .h-10 {
+        height: 40px;
+      }
+  
+      /* Ajuste del botón de home */
+      .text-2xl {
+        font-size: 2rem;
+      }
+    }
+  </style>
   
