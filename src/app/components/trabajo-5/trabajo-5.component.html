@@ -1,0 +1,35 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="product-carousel">
+  <div class="carousel-container">
+    <div class="carousel-wrapper" [style.transform]="'translateX(' + translateX + 'px)'">
+      <ng-container *ngFor="let product of products">
+        <div class="product-card">
+          <div class="image-container">
+            <img 
+              [src]="product.image" 
+              [alt]="product.name" 
+              class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">{{ product.name }}</h3>
+            <p class="product-price">${{ product.price }}</p>
+            <span class="inventory-status" [ngClass]="getSeverity(product.inventoryStatus)">
+              {{ product.inventoryStatus }}
+            </span>
+            <div class="action-buttons">
+              <button class="btn-favorite">
+                <i class="pi pi-heart"></i>
+              </button>
+              <button class="btn-cart">
+                <i class="pi pi-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <button class="carousel-button left" (click)="prevSlide()">&#10094;</button>
+    <button class="carousel-button right" (click)="nextSlide()">&#10095;</button>
+  </div>
+</div>

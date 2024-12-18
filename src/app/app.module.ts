@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AvatarModule } from 'primeng/avatar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { CardsComponent } from './components/trabajo-3/trabajo-3.component';
+import { Tarea4Component } from './components/tarea-4/tarea-4.component';
+import { Trabajo4Component } from './components/trabajo-4/trabajo-4.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CardsComponent } from './components/trabajo-3/trabajo-3.component';
     Grid1Component,
     Grid2Component,
     CardsComponent,
-    HomeComponent
+    HomeComponent,
+    Tarea4Component,
+    Trabajo4Component
   ],
   imports: [
     BrowserModule,

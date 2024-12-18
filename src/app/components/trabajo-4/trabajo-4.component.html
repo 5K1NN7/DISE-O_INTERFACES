@@ -1,0 +1,51 @@
+<div class="navigation">
+    <a href="casa.component.html">
+        <button class="btn btn-primary">Volver al Inicio</button>
+    </a>
+</div>
+
+<div class="container">
+    <h2 class="form-title">FORMULARIO</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-group">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" formControlName="firstName" placeholder="Ingresa tu nombre" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Apellidos:</label>
+            <input type="text" id="lastName" formControlName="lastName" placeholder="Ingresa tus apellidos" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" formControlName="email" placeholder="Ingresa tu correo electrónico" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" formControlName="cedula" placeholder="Ingresa tu cédula" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Género:</label>
+            <select id="gender" formControlName="gender" class="form-control">
+                <option value="">Seleccione una opción</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+                <option value="other">Otro</option>
+            </select>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <label>
+                <input type="checkbox" formControlName="agree" />
+                Acepto los términos y condiciones
+            </label>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+    </form>
+</div>
